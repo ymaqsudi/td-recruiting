@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 
 const criteria = [
@@ -13,6 +14,13 @@ const WhoFor = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-navy rounded-3xl px-8 sm:px-16 py-14 sm:py-20 grid lg:grid-cols-2 gap-12 items-center">
           <div>
+            <Image
+              src="/illustrations/whofor-team.svg"
+              alt="Illustration of a team working together"
+              width={200}
+              height={150}
+              className="w-40 h-auto mb-6"
+            />
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
               Who This Is Built For
             </span>

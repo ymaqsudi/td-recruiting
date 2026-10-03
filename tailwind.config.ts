@@ -8,17 +8,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Warm brown — replaces the old navy as our "dark" anchor color
         navy: {
-          DEFAULT: "#0B1F3A",
-          dark: "#081426",
-          light: "#13294D",
+          DEFAULT: "#4C4541",
+          dark: "#332E2B",
+          light: "#6B625C",
         },
+        // Warm amber — primary accent
         gold: {
-          DEFAULT: "#D4AF6A",
-          dark: "#BF9A52",
-          light: "#E6CFA0",
+          DEFAULT: "#F2C46A",
+          dark: "#C98B2E",
+          light: "#F8D896",
         },
-        cream: "#F7F3EC",
+        // Olive/sage — secondary accent
+        sage: {
+          DEFAULT: "#AEAC78",
+          dark: "#8E8C5E",
+          light: "#C4C296",
+        },
+        // Warm beige — page background
+        cream: "#FCF0DA",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Arial", "Helvetica", "sans-serif"],

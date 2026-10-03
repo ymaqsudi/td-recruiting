@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Users2, Target, Handshake, ArrowRight } from "lucide-react";
 
 const engagementModels = [
@@ -29,17 +30,28 @@ const Services = () => {
   return (
     <section id="services" className="bg-white py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mb-16">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark">
-            Ways to Work Together
-          </span>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl text-navy mt-3 mb-4">
-            Three models. One standard of work.
-          </h2>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            Every engagement is scoped to your stage, roadmap, and budget —
-            but the pipeline discipline never changes.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div className="max-w-2xl">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark">
+              Ways to Work Together
+            </span>
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-navy mt-3 mb-4">
+              Three models. One standard of work.
+            </h2>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Every engagement is scoped to your stage, roadmap, and budget —
+              but the pipeline discipline never changes.
+            </p>
+          </div>
+          <div className="hidden lg:block">
+            <Image
+              src="/illustrations/services-deal.svg"
+              alt="Illustration of two people shaking hands over a business agreement"
+              width={480}
+              height={360}
+              className="w-full h-auto"
+            />
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Founder = () => {
   return (
     <section id="about" className="bg-cream py-24 sm:py-32">
@@ -15,6 +17,13 @@ const Founder = () => {
             <p className="text-sm text-gray-500 text-center lg:text-left">
               Founder, TD Recruiting
             </p>
+            <Image
+              src="/illustrations/founder-interview.svg"
+              alt="Illustration of a job interview conversation"
+              width={220}
+              height={180}
+              className="w-44 h-auto mt-8 hidden lg:block"
+            />
           </div>
 
           <div>

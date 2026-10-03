@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const steps = [
   {
     number: "01",
@@ -29,17 +31,28 @@ const Process = () => {
   return (
     <section id="process" className="bg-navy-dark py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mb-16">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-            How It Works
-          </span>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 mb-4">
-            From mandate to signed offer.
-          </h2>
-          <p className="text-gray-300 text-lg leading-relaxed">
-            A repeatable process, not a one-off favor — so every search feels
-            as disciplined as the last.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div className="max-w-2xl">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+              How It Works
+            </span>
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 mb-4">
+              From mandate to signed offer.
+            </h2>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              A repeatable process, not a one-off favor — so every search
+              feels as disciplined as the last.
+            </p>
+          </div>
+          <div className="hidden lg:block">
+            <Image
+              src="/illustrations/process-search.svg"
+              alt="Illustration of people searching through candidate profiles"
+              width={480}
+              height={360}
+              className="w-full h-auto"
+            />
+          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
