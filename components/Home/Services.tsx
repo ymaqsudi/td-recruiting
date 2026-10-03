@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Users2, Target, Handshake, ArrowRight } from "lucide-react";
+import { Users2, Target, Handshake, Compass, ArrowRight } from "lucide-react";
 
 const engagementModels = [
   {
@@ -24,6 +24,13 @@ const engagementModels = [
     description:
       "Placement-fee only, offered case-by-case for the right founder relationship. Not our default model, but available when the fit is right.",
   },
+  {
+    title: "Recruiting Advisory",
+    tag: "Hourly engagement · no retainer required",
+    icon: Compass,
+    description:
+      "For teams that want expert guidance without hiring a firm or building out an internal function. We diagnose what's slowing your hiring down, sharpen your closing approach, and benchmark comp, then coach your own recruiters so the gains outlast the engagement.",
+  },
 ];
 
 const Services = () => {
@@ -36,11 +43,11 @@ const Services = () => {
               Ways to Work Together
             </span>
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-navy mt-3 mb-4">
-              Three models. One standard of work.
+              Four models. One standard of work.
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Every engagement is scoped to your stage, roadmap, and budget, but
-              the pipeline discipline never changes.
+              Every engagement is scoped to your stage, roadmap, and budget,
+              but the same standard of rigor carries through all of them.
             </p>
           </div>
           <div className="hidden lg:block">
@@ -54,13 +61,13 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {engagementModels.map(({ title, tag, description, icon: Icon, badge }) => (
             <div
               key={title}
               className={`relative rounded-2xl p-8 flex flex-col transition-all duration-300 ${
                 badge
-                  ? "bg-navy text-white shadow-xl shadow-navy/20 ring-1 ring-gold/40 md:-translate-y-3"
+                  ? "bg-navy text-white shadow-xl shadow-navy/20 ring-1 ring-gold/40"
                   : "bg-cream text-navy hover:shadow-lg"
               }`}
             >
