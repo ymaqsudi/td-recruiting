@@ -1,12 +1,13 @@
 import Image from "next/image";
+import Reveal from "@/components/ui/Reveal";
 
 const Founder = () => {
   return (
     <section id="about" className="bg-cream py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-[auto,1fr] gap-12 items-start">
-          <div className="flex flex-col items-center lg:items-start">
-            <div className="w-28 h-28 rounded-2xl bg-navy flex items-center justify-center shadow-lg shadow-navy/20 mb-4">
+          <Reveal className="flex flex-col items-center lg:items-start">
+            <div className="w-28 h-28 rounded-2xl bg-navy flex items-center justify-center shadow-lg shadow-navy/20 mb-4 transition-transform duration-300 hover:scale-105 hover:-rotate-2">
               <span className="font-display font-bold text-4xl text-gold">
                 MC
               </span>
@@ -17,16 +18,18 @@ const Founder = () => {
             <p className="text-sm text-gray-500 text-center lg:text-left">
               Founder, TD Recruiting
             </p>
-            <Image
-              src="/illustrations/founder-interview.svg"
-              alt="Illustration of a job interview conversation"
-              width={220}
-              height={180}
-              className="w-44 h-auto mt-8 hidden lg:block"
-            />
-          </div>
+            <div className="animate-float-slow hidden lg:block mt-8">
+              <Image
+                src="/illustrations/founder-interview.svg"
+                alt="Illustration of a job interview conversation"
+                width={220}
+                height={180}
+                className="w-44 h-auto"
+              />
+            </div>
+          </Reveal>
 
-          <div>
+          <Reveal delay={150}>
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark">
               Why This Is Different
             </span>
@@ -57,7 +60,7 @@ const Founder = () => {
               , our optional AI coaching layer for onboarding and interview
               practice.
             </p>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

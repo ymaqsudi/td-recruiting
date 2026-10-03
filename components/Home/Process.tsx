@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/ui/Reveal";
 
 const steps = [
   {
@@ -32,7 +33,7 @@ const Process = () => {
     <section id="process" className="bg-navy-dark py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div className="max-w-2xl">
+          <Reveal className="max-w-2xl">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
               How It Works
             </span>
@@ -43,22 +44,24 @@ const Process = () => {
               A repeatable process, not a one-off favor, so every search feels
               as disciplined as the last.
             </p>
-          </div>
-          <div className="hidden lg:block">
-            <Image
-              src="/illustrations/process-search.svg"
-              alt="Illustration of people searching through candidate profiles"
-              width={480}
-              height={360}
-              className="w-full h-auto"
-            />
-          </div>
+          </Reveal>
+          <Reveal delay={150} className="hidden lg:block">
+            <div className="animate-float">
+              <Image
+                src="/illustrations/process-search.svg"
+                alt="Illustration of people searching through candidate profiles"
+                width={480}
+                height={360}
+                className="w-full h-auto"
+              />
+            </div>
+          </Reveal>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, idx) => (
-            <div key={step.number} className="relative">
-              <div className="font-display font-bold text-5xl text-gold/30 mb-4">
+            <Reveal key={step.number} delay={idx * 120} className="relative">
+              <div className="font-display font-bold text-5xl text-gold/30 mb-4 transition-colors duration-300 hover:text-gold/60">
                 {step.number}
               </div>
               <h3 className="font-display font-bold text-lg text-white mb-2">
@@ -70,7 +73,7 @@ const Process = () => {
               {idx < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-6 right-0 w-full h-px bg-gradient-to-r from-gold/20 to-transparent translate-x-1/2" />
               )}
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

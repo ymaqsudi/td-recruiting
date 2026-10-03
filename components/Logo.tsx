@@ -15,7 +15,7 @@ const Logo = ({
       className={`flex items-center gap-3 group ${className}`}
       aria-label="TD Recruiting home"
     >
-      <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-gold text-navy font-display font-bold text-sm tracking-tight shrink-0 transition-colors group-hover:bg-gold-light">
+      <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-gold text-navy font-display font-bold text-sm tracking-tight shrink-0 transition-all duration-300 group-hover:bg-gold-light group-hover:-rotate-3 group-hover:scale-105">
         TD
       </span>
       <span className="flex flex-col leading-none">

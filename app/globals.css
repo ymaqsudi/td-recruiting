@@ -11,3 +11,16 @@ body {
   color: var(--foreground);
   background: var(--background);
 }
+
+/* Respect the user's motion preference: collapse every animation and
+   transition to effectively instant instead of disabling them piecemeal. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

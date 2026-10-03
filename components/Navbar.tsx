@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "@/components/Logo";
 
 const navLinks = [
@@ -11,11 +11,23 @@ const navLinks = [
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const closeMenu = () => setIsMenuOpen(false);
 
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+    <header
+      className={`sticky top-0 z-50 bg-white/95 backdrop-blur border-b transition-shadow duration-300 ${
+        isScrolled ? "border-gray-100 shadow-sm" : "border-transparent"
+      }`}
+    >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Logo />
@@ -36,7 +48,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <a
               href="#contact"
-              className="inline-block bg-gold hover:bg-gold-dark text-navy font-display font-bold text-sm px-5 py-2.5 rounded-lg transition-colors"
+              className="inline-block bg-gold hover:bg-gold-dark text-navy font-display font-bold text-sm px-5 py-2.5 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95"
             >
               Start a Search
             </a>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Users2, Target, Handshake, Compass, ArrowRight } from "lucide-react";
+import Reveal from "@/components/ui/Reveal";
 
 const primaryModels = [
   {
@@ -42,7 +43,7 @@ const Services = () => {
     <section id="services" className="bg-white py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div className="max-w-2xl">
+          <Reveal className="max-w-2xl">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark">
               Ways to Work Together
             </span>
@@ -54,8 +55,8 @@ const Services = () => {
               most founders work with us. Contingency and advisory
               engagements are available too, for the right fit.
             </p>
-          </div>
-          <div className="hidden lg:block">
+          </Reveal>
+          <Reveal delay={150} className="hidden lg:block">
             <Image
               src="/illustrations/services-deal.svg"
               alt="Illustration of two people shaking hands over a business agreement"
@@ -63,37 +64,36 @@ const Services = () => {
               height={360}
               className="w-full h-auto"
             />
-          </div>
+          </Reveal>
         </div>
 
         {/* Primary models: the two we lead with */}
         <div className="grid lg:grid-cols-2 gap-8 mb-10">
-          {primaryModels.map(({ title, tag, description, icon: Icon, badge }) => (
-            <div
-              key={title}
-              className="relative rounded-2xl p-10 flex flex-col bg-navy text-white shadow-xl shadow-navy/20 ring-1 ring-gold/40"
-            >
-              <span className="absolute -top-3 left-10 text-[10px] uppercase tracking-widest font-bold bg-gold text-navy px-3 py-1 rounded-full">
-                {badge}
-              </span>
-              <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6">
-                <Icon className="h-7 w-7 text-gold" />
+          {primaryModels.map(({ title, tag, description, icon: Icon, badge }, idx) => (
+            <Reveal key={title} delay={idx * 120}>
+              <div className="relative rounded-2xl p-10 flex flex-col bg-navy text-white shadow-xl shadow-navy/20 ring-1 ring-gold/40 transition-transform duration-300 hover:-translate-y-1.5">
+                <span className="absolute -top-3 left-10 text-[10px] uppercase tracking-widest font-bold bg-gold text-navy px-3 py-1 rounded-full">
+                  {badge}
+                </span>
+                <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6">
+                  <Icon className="h-7 w-7 text-gold" />
+                </div>
+                <h3 className="font-display font-bold text-2xl mb-2">{title}</h3>
+                <p className="text-xs uppercase tracking-wide mb-4 font-semibold text-gold-light">
+                  {tag}
+                </p>
+                <p className="text-base leading-relaxed flex-1 text-gray-200">
+                  {description}
+                </p>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center justify-center gap-2 mt-8 bg-gold hover:bg-gold-light text-navy font-display font-bold text-sm px-6 py-3 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 w-fit"
+                >
+                  Start This Engagement
+                  <ArrowRight className="w-4 h-4" />
+                </a>
               </div>
-              <h3 className="font-display font-bold text-2xl mb-2">{title}</h3>
-              <p className="text-xs uppercase tracking-wide mb-4 font-semibold text-gold-light">
-                {tag}
-              </p>
-              <p className="text-base leading-relaxed flex-1 text-gray-200">
-                {description}
-              </p>
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center gap-2 mt-8 bg-gold hover:bg-gold-light text-navy font-display font-bold text-sm px-6 py-3 rounded-lg transition-colors w-fit"
-              >
-                Start This Engagement
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
+            </Reveal>
           ))}
         </div>
 
@@ -105,30 +105,29 @@ const Services = () => {
           <div className="flex-1 h-px bg-gray-200" />
         </div>
         <div className="grid sm:grid-cols-2 gap-6">
-          {secondaryModels.map(({ title, tag, description, icon: Icon }) => (
-            <div
-              key={title}
-              className="rounded-xl p-6 flex items-start gap-4 bg-cream hover:shadow-md transition-shadow"
-            >
-              <Icon className="h-6 w-6 text-navy/60 mt-1 flex-shrink-0" />
-              <div>
-                <h4 className="font-display font-bold text-base text-navy mb-1">
-                  {title}
-                </h4>
-                <p className="text-xs uppercase tracking-wide text-gold-dark font-semibold mb-2">
-                  {tag}
-                </p>
-                <p className="text-sm text-gray-600 leading-relaxed mb-2">
-                  {description}
-                </p>
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy hover:gap-2.5 transition-all"
-                >
-                  Learn more <ArrowRight className="w-3.5 h-3.5" />
-                </a>
+          {secondaryModels.map(({ title, tag, description, icon: Icon }, idx) => (
+            <Reveal key={title} delay={idx * 100}>
+              <div className="rounded-xl p-6 flex items-start gap-4 bg-cream hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                <Icon className="h-6 w-6 text-navy/60 mt-1 flex-shrink-0" />
+                <div>
+                  <h4 className="font-display font-bold text-base text-navy mb-1">
+                    {title}
+                  </h4>
+                  <p className="text-xs uppercase tracking-wide text-gold-dark font-semibold mb-2">
+                    {tag}
+                  </p>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-2">
+                    {description}
+                  </p>
+                  <a
+                    href="#contact"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy hover:gap-2.5 transition-all"
+                  >
+                    Learn more <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
