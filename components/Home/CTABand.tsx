@@ -18,7 +18,7 @@ const CTABand = () => {
         </h2>
         <p className="text-gray-300 text-lg max-w-xl mx-auto mb-10">
           Reach out to discuss which engagement model fits your stage and
-          roadmap — most conversations start on LinkedIn.
+          roadmap. Most conversations start on LinkedIn.
         </p>
         <a
           href="https://www.linkedin.com/in/murshedchowdhury"

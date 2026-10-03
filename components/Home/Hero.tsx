@@ -21,7 +21,7 @@ const Hero = () => {
 
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-10">
               We build the outsourced talent function for growth-stage
-              founders in AI, tech, and finance — the same pipeline
+              founders in AI, tech, and finance. You get the same pipeline
               discipline and closing rigor as an in-house hiring team,
               without the headcount.
             </p>

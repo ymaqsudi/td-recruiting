@@ -8,7 +8,7 @@ const engagementModels = [
     badge: "Most Popular",
     icon: Users2,
     description:
-      "We operate as your outsourced talent team across multiple concurrent roles — weekly cadence, comp benchmarking, a closing playbook, and a hiring rubric your team keeps. The operating rigor of an in-house function, without the headcount.",
+      "We operate as your outsourced talent team across multiple concurrent roles: weekly cadence, comp benchmarking, a closing playbook, and a hiring rubric your team keeps. The operating rigor of an in-house function, without the headcount.",
   },
   {
     title: "Exclusive Retained Search",
@@ -39,8 +39,8 @@ const Services = () => {
               Three models. One standard of work.
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Every engagement is scoped to your stage, roadmap, and budget —
-              but the pipeline discipline never changes.
+              Every engagement is scoped to your stage, roadmap, and budget, but
+              the pipeline discipline never changes.
             </p>
           </div>
           <div className="hidden lg:block">

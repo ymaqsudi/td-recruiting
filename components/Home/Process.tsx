@@ -5,7 +5,7 @@ const steps = [
     number: "01",
     title: "Align on the Mandate",
     description:
-      "We start with the role, not the resume — scope, comp band, must-haves versus nice-to-haves, and what success looks like at 90 days.",
+      "We start with the role, not the resume: scope, comp band, must-haves versus nice-to-haves, and what success looks like at 90 days.",
   },
   {
     number: "02",
@@ -40,8 +40,8 @@ const Process = () => {
               From mandate to signed offer.
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed">
-              A repeatable process, not a one-off favor — so every search
-              feels as disciplined as the last.
+              A repeatable process, not a one-off favor, so every search feels
+              as disciplined as the last.
             </p>
           </div>
           <div className="hidden lg:block">

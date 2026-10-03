@@ -3,7 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 
 const criteria = [
   "You're scaling from roughly 20 to 100 people",
-  "You don't have — and shouldn't yet hire — an internal talent leader",
+  "You don't have, and shouldn't yet hire, an internal talent leader",
   "You've got funding and roadmap, and roles to fill this quarter",
   "You want pipeline discipline, not a stack of resumes to sort through",
 ];

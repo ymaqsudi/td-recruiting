@@ -35,13 +35,13 @@ const Founder = () => {
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-5">
               TD Recruiting operates like the in-house talent team you&apos;d
-              hire if you were ready — the same pipeline discipline, closing
+              hire if you were ready: the same pipeline discipline, closing
               playbook, and quality bar, delivered by someone who has run
               that function from the inside.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed mb-5">
               Led by a 20+ year talent leader with time at Netflix, AWS,
-              Capital One, Major League Baseball, Wayfair, and AbbVie —
+              Capital One, Major League Baseball, Wayfair, and AbbVie, and
               currently embedded as Head of Talent at a Series B AI startup.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
